@@ -11,6 +11,28 @@ namespace WebApplication1.Controllers
 {
     public class MoviesController : Controller
     {
+        public ViewResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Shrek" },
+                new Movie { Id = 2, Name = "Wall-e" }
+            };
+        }
+
+
+
+
+
+
+
         // GET: Movies
         public ActionResult Random()
         {
@@ -35,37 +57,6 @@ namespace WebApplication1.Controllers
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public ActionResult Edit(int id)
-        {
-            return Content("id=" + id);
-        }
-
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
-
-            if (String.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
-
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
     }
 }
