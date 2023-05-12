@@ -236,9 +236,14 @@
     <Compile Include="Migrations\202305020823362_Genres.designer.cs">
       <DependentUpon>202305020823362_Genres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305120832468_SeedUsers.cs" />
+    <Compile Include="Migrations\202305120832468_SeedUsers.designer.cs">
+      <DependentUpon>202305120832468_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -487,10 +492,11 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -538,6 +544,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305020823362_Genres.resx">
       <DependentUpon>202305020823362_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305120832468_SeedUsers.resx">
+      <DependentUpon>202305120832468_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
