@@ -8,6 +8,14 @@ namespace WebApplication1.Models
         [Required]
         [Display(Name = "전자 메일")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLicense { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -65,6 +73,10 @@ namespace WebApplication1.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Driving License")]
+        public string DrivingLicense { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "전자 메일")]
         public string Email { get; set; }
@@ -79,6 +91,10 @@ namespace WebApplication1.Models
         [Display(Name = "암호 확인")]
         [Compare("Password", ErrorMessage = "암호와 확인 암호가 일치하지 않습니다.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ResetPasswordViewModel
